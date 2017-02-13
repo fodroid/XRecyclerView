@@ -1,2 +1,2 @@
 # XRecyclerView
-支持下拉刷新及加载更多的RecyclerView
+Material Design风格，支持下拉刷新及加载更多的RecyclerView

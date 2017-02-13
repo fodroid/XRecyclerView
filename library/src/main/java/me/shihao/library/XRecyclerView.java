@@ -8,6 +8,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.TintTypedArray;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -46,7 +47,7 @@ public class XRecyclerView extends SwipeRefreshLayout {
     private void init(Context context) {
         LayoutInflater.from(context).inflate(R.layout.layout_xrecyclerview, this);
         scrollView = (NestedScrollView) findViewById(R.id.scrollView);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler);
         textView = (TextView) findViewById(R.id.textView);
         progressBar = (MaterialProgressBar) findViewById(R.id.progressBar);
         llLoadMoreView = (LinearLayout) findViewById(R.id.ll_loadmore);
@@ -146,7 +147,7 @@ public class XRecyclerView extends SwipeRefreshLayout {
 
     private int getColorAccent() {
         int accentColor = 0xFF9800;
-        int[] attrsArray = {android.R.attr.colorAccent};
+        int[] attrsArray = {R.attr.colorAccent};
         TypedArray typedArray = getContext().obtainStyledAttributes(attrsArray);
         try {
             accentColor = typedArray.getColor(0, accentColor);
