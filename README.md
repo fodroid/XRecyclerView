@@ -3,8 +3,9 @@ Material Design风格，支持下拉刷新及加载更多的RecyclerView
 
 #功能特点 function
 
--官方Material Design风格。
--支持下来刷新，自动加载更多。
+*官方Material Design风格。*
+
+*支持下来刷新，自动加载更多。*
 
 #Usage 使用
 `gradle`
