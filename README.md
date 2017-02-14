@@ -5,6 +5,8 @@ Material Design风格，支持下拉刷新及加载更多的RecyclerView
 
 * 官方Material Design风格。
 * 支持自动刷新、下来刷新、自动加载更多。
+* 支持添加多个Header和Footer。
+* 封装了RecyclerAdapter，使用更方便。
 
 # Usage 使用
 `gradle`
@@ -39,12 +41,34 @@ Add the dependency
         <version>v1.0</version>
     </dependency>
 
-详细的使用方法可以查看`app`文件夹中<br>
-* 在xml中引入XRecyclerView<br>
-<pre><code>
+####详细的使用方法可以查看`app`文件夹中<br>
+#####1.在xml中引入XRecyclerView<br>
     <me.shihao.library.XRecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-</pre></code>
+#####2.在java代码中设置<br>
+    xRecyclerView = (XRecyclerView) findViewById(R.id.recyclerview);
+    adapter = new TestAdapter(this);
+    xRecyclerView.verticalLayoutManager().setAdpter(adapter);
+    //xRecyclerView.horizontalLayoutManager().setAdapter(adapter);
+#####3.设置刷新监听<br>
+    xRecyclerView.setOnRefreshListener(new XRecyclerView.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            //刷新
+        }
+
+        @Override
+        public void onLoadMore() {
+            //加载更多
+        }
+    });
+#####4.数据获取完成后通知界面<br>
+    xRecyclerView.refreshComlete();
+####其它常用方法
+* 自动刷新 `xRecyclerView.autoRefresh()`。
+* 添加Header、Footer `xRecyclerView.addHeaderView(View view)` `xRecyclerView.addFooterView(View view)`。
+* 数据加载后没有更多数据了，可以设置 `xRecyclerView.loadMoreNoData()`。再次滑动到底部时可以显示相应的文字，且不会再加载数据。
+* 如果继承了`RecyclerAdapter`，对数据的增删可以调用`adapter.addElement` `adapter.removeElement`。
 
