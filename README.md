@@ -64,7 +64,7 @@ Add the dependency
             //加载更多
         }
     });
-#####4.数据获取完成后通知界面<br>
+#####4.数据获取完成后通知界面`必须调用`<br>
     xRecyclerView.refreshComlete();
 ####其它常用方法
 * 自动刷新 `xRecyclerView.autoRefresh()`。
