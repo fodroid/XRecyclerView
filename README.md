@@ -72,3 +72,5 @@ Add the dependency
 * 数据加载后没有更多数据了，可以设置 `xRecyclerView.loadMoreNoData()`。再次滑动到底部时可以显示相应的文字，且不会再加载数据。
 * 如果继承了`RecyclerAdapter`，对数据的增删可以调用`adapter.addElement` `adapter.removeElement`。
 
+#鸣谢：
+#####ProgressBar使用了DreaminginCodeZH的开源库，大家可以去详细了解。（[MaterialProgressBar传送门](https://github.com/DreaminginCodeZH/MaterialProgressBar) ）
