@@ -1,6 +1,6 @@
 # XRecyclerView
 Material Design风格，支持下拉刷新及加载更多的RecyclerView
-
+<img src="https://github.com/fodroid/XRecyclerView/blob/master/capture/4744071.gif" width="480" height="800" />
 # Function 功能特点
 
 * 官方Material Design风格。
